@@ -24,4 +24,12 @@ func main() {
 	fileDes := filePointer.Fd()
 	fmt.Println(fileDes)
 
+	filePointer2, err := os.Open("gols.go")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// get file descriptor
+	fileDes2 := filePointer2.Fd()
+	fmt.Println(fileDes2)
 }
